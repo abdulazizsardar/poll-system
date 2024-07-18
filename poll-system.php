@@ -49,20 +49,20 @@ function poll_sys_add_admin_menu() {
         'dashicons-chart-bar'
     );
     add_submenu_page(
-        'poll-system',          // Parent slug
-        'Add New Poll',         // Page title
-        'Add New',              // Menu title
-        'manage_options',       // Capability
-        'poll-system-add-new',  // Menu slug
-        'poll_sys_add_new_page' // Function to display the page content
+        'poll-system',          
+        'Add New Poll',         
+        'Add New',              
+        'manage_options',       
+        'poll-system-add-new',  
+        'poll_sys_add_new_page' 
     );
     add_submenu_page(
-        null,                   // No parent, accessed directly
-        'Edit Poll',            // Page title
-        'Edit Poll',            // Menu title
-        'manage_options',       // Capability
-        'poll-system-edit',     // Menu slug
-        'poll_sys_edit_page'    // Function to display the page content
+        null,                   
+        'Edit Poll',            
+        'Edit Poll',            
+        'manage_options',       
+        'poll-system-edit',     
+        'poll_sys_edit_page' 
     );
 }
 add_action('admin_menu', 'poll_sys_add_admin_menu');
