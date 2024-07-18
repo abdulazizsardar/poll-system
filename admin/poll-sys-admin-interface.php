@@ -22,7 +22,7 @@ function poll_sys_admin_page() {
                         <td><?php echo esc_html($index + 1); ?></td>
                         <td><?php echo esc_html($poll['title']); ?></td>
                         <td><?php echo esc_html(implode(', ', $poll['options'])); ?></td>
-                        <td>[poll id="<?php echo esc_html($index); ?>"]</td>
+                        <td>[poll shortcode"]</td>
                         <td>
                             <a href="admin.php?page=poll-system-edit&poll_id=<?php echo esc_attr($index); ?>" class="button">Edit</a>
                             <button class="button poll-sys-delete-btn" data-index="<?php echo esc_attr($index); ?>">Delete</button>

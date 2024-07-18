@@ -22,23 +22,20 @@ function poll_sys_save_poll() {
         $polls[$poll_id] = $poll_data;
         update_option('poll_sys_polls', $polls);
 
-        $shortcode = '[poll id="' . $poll_id . '"]';
+       
         wp_send_json_success(array(
             'message' => 'Poll updated successfully!',
-            'poll' => $poll_data,
-            'shortcode' => $shortcode
+            'poll' => $poll_data
         ));
     } else {
         // Add new poll
         $polls[] = $poll_data;
         update_option('poll_sys_polls', $polls);
 
-        $shortcode = '[poll id="' . (count($polls) - 1) . '"]';
+       
         wp_send_json_success(array(
             'message' => 'Poll saved successfully!',
-            'poll' => $poll_data,
-            'shortcode' => $shortcode,
-            'index' => count($polls) - 1
+            'poll' => $poll_data
         ));
     }
 }
